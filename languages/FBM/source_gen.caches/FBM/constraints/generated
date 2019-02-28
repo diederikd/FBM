@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="1ndbem5bldany0nzwl5p3ihjxfycj9t">
+  <files names="ConstraintsAspectDescriptor.java:DataType_Constraints.java:DomainObjectType_Constraints.java:FactModel_Constraints.java:FactRole_Constraints.java:Fact_Constraints.java:IDomainObject_Constraints.java:ObjectType_Constraints.java:Position_Constraints.java:PredicateReading_Constraints.java:Predicate_Constraints.java:ReadingRoleText_Constraints.java:Role_Constraints.java" />
+</product>
+
