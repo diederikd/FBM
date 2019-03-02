@@ -40,25 +40,25 @@ public final class UniquenessConstraint__BehaviorDescriptor extends BaseBHDescri
   }
 
   /*package*/ static int Arity_id3neIg_bQBIB(@NotNull SNode __thisNode__) {
-    return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, 0x35ceb9094bd80220L, "roles"))).count();
+    return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, 0x35ceb9094bd80220L, "restricts"))).count();
   }
   /*package*/ static boolean IsInternal_id3neIg_bScgX(@NotNull SNode __thisNode__) {
     List<SNode> factTypes = new ArrayList<SNode>();
-    for (SNode role : Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, 0x35ceb9094bd80220L, "roles")), MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd8021aL, 0x35ceb9094bd8021bL, "role")))) {
+    for (SNode role : Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, 0x35ceb9094bd80220L, "restricts")), MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd8021aL, 0x35ceb9094bd8021bL, "role")))) {
       ListSequence.fromList(factTypes).addElement(SNodeOperations.cast(SNodeOperations.getParent(role), MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL, "FBM.structure.FactType")));
     }
     return (ListSequence.fromList(factTypes).count() == 1);
   }
   /*package*/ static boolean IsExternal_id3neIg_bShsb(@NotNull SNode __thisNode__) {
     List<SNode> factTypes = new ArrayList<SNode>();
-    for (SNode role : Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, 0x35ceb9094bd80220L, "roles")), MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd8021aL, 0x35ceb9094bd8021bL, "role")))) {
+    for (SNode role : Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, 0x35ceb9094bd80220L, "restricts")), MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd8021aL, 0x35ceb9094bd8021bL, "role")))) {
       ListSequence.fromList(factTypes).addElement(SNodeOperations.cast(SNodeOperations.getParent(role), MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL, "FBM.structure.FactType")));
     }
     return (ListSequence.fromList(factTypes).count() > 1);
   }
   /*package*/ static boolean IsSpanning_id3neIg_bQGeL(@NotNull SNode __thisNode__) {
     List<SNode> factTypes = new ArrayList<SNode>();
-    for (SNode role : Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, 0x35ceb9094bd80220L, "roles")), MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd8021aL, 0x35ceb9094bd8021bL, "role")))) {
+    for (SNode role : Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, 0x35ceb9094bd80220L, "restricts")), MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd8021aL, 0x35ceb9094bd8021bL, "role")))) {
       ListSequence.fromList(factTypes).addElement(SNodeOperations.cast(SNodeOperations.getParent(role), MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL, "FBM.structure.FactType")));
     }
     return ((ListSequence.fromList(factTypes).count() == 1) && (ListSequence.fromList(factTypes).count() == (int) FactType__BehaviorDescriptor.Arity_id3neIg_bH6jP.invoke(ListSequence.fromList(factTypes).getElement(1))));

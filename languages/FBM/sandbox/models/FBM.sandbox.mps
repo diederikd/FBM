@@ -42,6 +42,15 @@
         <child id="3005699363395768184" name="factSID" index="11peNt" />
         <child id="3005699363387459860" name="roles" index="11TqEL" />
       </concept>
+      <concept id="9079593021067007379" name="FBM.structure.MandatoryConstraint" flags="ng" index="1bOqgG">
+        <child id="9079593021067007394" name="restricts" index="1bOqgt" />
+      </concept>
+      <concept id="3877239778790867482" name="FBM.structure.RoleReference" flags="ng" index="1Y5FGj">
+        <reference id="3877239778790867483" name="role" index="1Y5FGi" />
+      </concept>
+      <concept id="3877239778790867479" name="FBM.structure.UniquenessConstraint" flags="ng" index="1Y5FGu">
+        <child id="3877239778790867488" name="restricts" index="1Y5FGD" />
+      </concept>
       <concept id="3877239778790550084" name="FBM.structure.ReadingRoleText" flags="ng" index="1Y7pdd">
         <property id="3877239778792249425" name="pre_bound" index="1Y8U5o" />
         <property id="3877239778792249427" name="post_bound" index="1Y8U5q" />
@@ -60,7 +69,7 @@
         <child id="3005699363387376300" name="facts" index="11Te49" />
         <child id="3877239778791884915" name="objecttypes" index="1Yaj5U" />
         <child id="3877239778788209085" name="sysobjecttypes" index="1YosyO" />
-        <child id="3877239778788203367" name="facttypes" index="1You9I" />
+        <child id="3877239778788203367" name="facttypesAndConstraints" index="1You9I" />
       </concept>
       <concept id="3877239778788988701" name="FBM.structure.ObjectTypeName" flags="ng" index="1YtuSk" />
       <concept id="3877239778788790140" name="FBM.structure.PredicateReading" flags="ng" index="1YtJpP">
@@ -175,6 +184,18 @@
       <node concept="1You8_" id="2AQoUlCE8CZ" role="1You9F">
         <property role="TrG5h" value="taxPayer" />
         <ref role="1You9H" node="3neIg_bVhql" resolve="boolean" />
+      </node>
+    </node>
+    <node concept="1bOqgG" id="7S1crWPVdYI" role="1You9I">
+      <property role="TrG5h" value="Mandatory" />
+      <node concept="1Y5FGj" id="7S1crWPVfBe" role="1bOqgt">
+        <ref role="1Y5FGi" node="2AQoUlCE8CY" resolve="person" />
+      </node>
+    </node>
+    <node concept="1Y5FGu" id="7S1crWPVdUj" role="1You9I">
+      <property role="TrG5h" value="Uniqueness" />
+      <node concept="1Y5FGj" id="7S1crWPVdWs" role="1Y5FGD">
+        <ref role="1Y5FGi" node="2AQoUlCE8CY" resolve="person" />
       </node>
     </node>
     <node concept="1You8$" id="3neIg_bVhsg" role="1You9I">
@@ -439,6 +460,48 @@
           <node concept="11Te4f" id="2AQoUlD7cXI" role="11Kx1d">
             <node concept="11ORCO" id="2AQoUlD7cXJ" role="11ORCJ">
               <property role="11ORCR" value="test" />
+              <ref role="11Te4d" node="3neIg_bVhqh" resolve="text" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="11ZmFu" id="2AQoUlDguCD" role="11gmIg">
+        <ref role="11ZmFp" node="3neIg_bVhss" resolve="Person has familyname" />
+        <node concept="11p0_z" id="2AQoUlDguCE" role="11peNt">
+          <property role="11p0_y" value="31d3e19a-49d8-4210-b212-a6146e5d9995" />
+        </node>
+        <node concept="11TqEJ" id="2AQoUlDguCF" role="11TqEL">
+          <ref role="11TqEI" node="3neIg_bVhsw" resolve="Person" />
+          <node concept="11bh1M" id="2AQoUlDguDr" role="11Kx1d">
+            <ref role="11bh1X" node="2AQoUlCphA5" resolve="p1" />
+          </node>
+        </node>
+        <node concept="11TqEJ" id="2AQoUlDguCH" role="11TqEL">
+          <ref role="11TqEI" node="3neIg_bVhsx" resolve="FamilyName" />
+          <node concept="11Te4f" id="2AQoUlDguCI" role="11Kx1d">
+            <node concept="11ORCO" id="2AQoUlDguCJ" role="11ORCJ">
+              <property role="11ORCR" value="1" />
+              <ref role="11Te4d" node="3neIg_bVhqh" resolve="text" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="11ZmFu" id="2AQoUlDguDv" role="11gmIg">
+        <ref role="11ZmFp" node="3neIg_bVhss" resolve="Person has familyname" />
+        <node concept="11p0_z" id="2AQoUlDguDw" role="11peNt">
+          <property role="11p0_y" value="6fce1d0e-c865-47ad-ba8d-a6573669c6fa" />
+        </node>
+        <node concept="11TqEJ" id="2AQoUlDguDx" role="11TqEL">
+          <ref role="11TqEI" node="3neIg_bVhsw" resolve="Person" />
+          <node concept="11bh1M" id="2AQoUlDh2hV" role="11Kx1d">
+            <ref role="11bh1X" node="2AQoUlCphA5" resolve="p1" />
+          </node>
+        </node>
+        <node concept="11TqEJ" id="2AQoUlDguDz" role="11TqEL">
+          <ref role="11TqEI" node="3neIg_bVhsx" resolve="FamilyName" />
+          <node concept="11Te4f" id="2AQoUlDguD$" role="11Kx1d">
+            <node concept="11ORCO" id="2AQoUlDguD_" role="11ORCJ">
+              <property role="11ORCR" value="6" />
               <ref role="11Te4d" node="3neIg_bVhqh" resolve="text" />
             </node>
           </node>

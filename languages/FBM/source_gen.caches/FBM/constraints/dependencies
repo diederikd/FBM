@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="FBM.constraints.Constraint_Constraints">
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
+  </dependency>
   <dependency className="FBM.constraints.ConstraintsAspectDescriptor">
+    <classNode dependClassName="FBM.constraints.Constraint_Constraints" />
     <classNode dependClassName="FBM.constraints.DataType_Constraints" />
     <classNode dependClassName="FBM.constraints.DomainObjectType_Constraints" />
     <classNode dependClassName="FBM.constraints.FactModel_Constraints" />
     <classNode dependClassName="FBM.constraints.FactRole_Constraints" />
     <classNode dependClassName="FBM.constraints.Fact_Constraints" />
-    <classNode dependClassName="FBM.constraints.IDomainObject_Constraints" />
+    <classNode dependClassName="FBM.constraints.IFactModelElement_Constraints" />
     <classNode dependClassName="FBM.constraints.ObjectType_Constraints" />
     <classNode dependClassName="FBM.constraints.Position_Constraints" />
     <classNode dependClassName="FBM.constraints.PredicateReading_Constraints" />
@@ -95,7 +100,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
   </dependency>
-  <dependency className="FBM.constraints.IDomainObject_Constraints">
+  <dependency className="FBM.constraints.IFactModelElement_Constraints">
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
   </dependency>

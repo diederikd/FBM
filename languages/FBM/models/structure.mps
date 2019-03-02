@@ -13,6 +13,13 @@
       <concept id="7862711839422615209" name="jetbrains.mps.lang.structure.structure.DocumentedNodeAnnotation" flags="ng" index="t5JxF">
         <property id="7862711839422615217" name="text" index="t5JxN" />
       </concept>
+      <concept id="1082978164219" name="jetbrains.mps.lang.structure.structure.EnumerationDataTypeDeclaration" flags="ng" index="AxPO7">
+        <reference id="1083171729157" name="memberDataType" index="M4eZT" />
+        <child id="1083172003582" name="member" index="M5hS2" />
+      </concept>
+      <concept id="1083171877298" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ig" index="M4N5e">
+        <property id="1083923523172" name="externalValue" index="1uS6qo" />
+      </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
@@ -20,9 +27,7 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
-      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ">
-        <child id="1169127546356" name="extends" index="PrDN$" />
-      </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -95,6 +100,9 @@
     <node concept="PrWs8" id="3neIg_bKnrr" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
+    <node concept="PrWs8" id="7S1crWPOaEM" role="PzmwI">
+      <ref role="PrY4T" node="2AQoUlCXKwC" resolve="IFactModelElement" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3neIg_bFPHA">
     <property role="EcuMT" value="3877239778788203366" />
@@ -106,7 +114,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="objecttypes" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="3neIg_bFPGF" resolve="ObjectType" />
+      <ref role="20lvS9" node="2AQoUlCXKwC" resolve="IFactModelElement" />
     </node>
     <node concept="1TJgyj" id="3neIg_bFR6X" role="1TKVEi">
       <property role="IQ2ns" value="3877239778788209085" />
@@ -118,9 +126,9 @@
     <node concept="1TJgyj" id="3neIg_bFPHB" role="1TKVEi">
       <property role="IQ2ns" value="3877239778788203367" />
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="facttypes" />
+      <property role="20kJfa" value="facttypesAndConstraints" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="3neIg_bFPGH" resolve="FactType" />
+      <ref role="20lvS9" node="2AQoUlCXKwC" resolve="IFactModelElement" />
     </node>
     <node concept="1TJgyj" id="2AQoUlCoeTa" role="1TKVEi">
       <property role="IQ2ns" value="3005699363388321354" />
@@ -176,6 +184,15 @@
     <property role="TrG5h" value="EntityType" />
     <property role="3GE5qa" value="FBM-2-02-Object-Type-and-ObjectTypeName" />
     <ref role="1TJDcQ" node="3neIg_bGyzq" resolve="DomainObjectType" />
+    <node concept="1TJgyj" id="7S1crWPVZsN" role="1TKVEi">
+      <property role="IQ2ns" value="9079593021069063987" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="directlyIdentified" />
+      <ref role="20lvS9" node="3neIg_bQ08n" resolve="UniquenessConstraint" />
+    </node>
+    <node concept="PrWs8" id="7S1crWPXI_f" role="PzmwI">
+      <ref role="PrY4T" node="2AQoUlCXKwC" resolve="IFactModelElement" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3neIg_bGyzw">
     <property role="EcuMT" value="3877239778788387040" />
@@ -188,6 +205,9 @@
       <property role="20kJfa" value="mapsTo" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="3neIg_bGyzz" resolve="DataType" />
+    </node>
+    <node concept="PrWs8" id="7S1crWPXI_j" role="PzmwI">
+      <ref role="PrY4T" node="2AQoUlCXKwC" resolve="IFactModelElement" />
     </node>
   </node>
   <node concept="1TIwiD" id="3neIg_bGyzz">
@@ -207,6 +227,9 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="alternateName" />
       <ref role="20lvS9" node="3neIg_bIPst" resolve="ObjectTypeName" />
+    </node>
+    <node concept="PrWs8" id="7S1crWPXI_n" role="PzmwI">
+      <ref role="PrY4T" node="2AQoUlCXKwC" resolve="IFactModelElement" />
     </node>
   </node>
   <node concept="1TIwiD" id="3neIg_bHoS3">
@@ -323,38 +346,29 @@
       <ref role="20lvS9" node="3neIg_bFPGH" resolve="FactType" />
     </node>
   </node>
-  <node concept="1TIwiD" id="3neIg_bQ06M">
-    <property role="EcuMT" value="3877239778790867378" />
-    <property role="3GE5qa" value="FBM-2-10-Subtyping" />
-    <property role="TrG5h" value="SubType" />
-    <ref role="1TJDcQ" node="3neIg_bFPGC" resolve="FBMEntityType" />
-    <node concept="1TJgyj" id="3neIg_bQ06T" role="1TKVEi">
-      <property role="IQ2ns" value="3877239778790867385" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="supertype" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="3neIg_bFPGF" resolve="ObjectType" />
-    </node>
-    <node concept="1TJgyj" id="3neIg_bQ06N" role="1TKVEi">
-      <property role="IQ2ns" value="3877239778790867379" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="subtype" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="3neIg_bFPGF" resolve="ObjectType" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="3neIg_bQ08i">
     <property role="EcuMT" value="3877239778790867474" />
     <property role="TrG5h" value="Constraint" />
     <property role="3GE5qa" value="FBM-2-16-Constraints" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="3neIg_bFPGC" resolve="FBMEntityType" />
+    <node concept="1TJgyi" id="7S1crWPO9ms" role="1TKVEl">
+      <property role="IQ2nx" value="9079593021067007388" />
+      <property role="TrG5h" value="modality" />
+      <ref role="AX2Wp" node="7S1crWPO9ml" resolve="Modality" />
+    </node>
     <node concept="1TJgyj" id="3neIg_bQ08l" role="1TKVEi">
       <property role="IQ2ns" value="3877239778790867477" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="Name" />
       <property role="20lbJX" value="0..1" />
       <ref role="20lvS9" node="3neIg_bQ08j" resolve="ConstraintName" />
+    </node>
+    <node concept="PrWs8" id="7S1crWPO9mg" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="7S1crWPOaE3" role="PzmwI">
+      <ref role="PrY4T" node="2AQoUlCXKwC" resolve="IFactModelElement" />
     </node>
   </node>
   <node concept="1TIwiD" id="3neIg_bQ08j">
@@ -374,7 +388,7 @@
     <node concept="1TJgyj" id="3neIg_bQ08w" role="1TKVEi">
       <property role="IQ2ns" value="3877239778790867488" />
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="roles" />
+      <property role="20kJfa" value="restricts" />
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="3neIg_bQ08q" resolve="RoleReference" />
     </node>
@@ -382,7 +396,7 @@
   <node concept="1TIwiD" id="3neIg_bQ08q">
     <property role="EcuMT" value="3877239778790867482" />
     <property role="TrG5h" value="RoleReference" />
-    <property role="3GE5qa" value="FBM-2-20-Uniqueness-Constraints" />
+    <property role="3GE5qa" value="FBM-2-01-Core-Elements" />
     <node concept="1TJgyj" id="3neIg_bQ08r" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20lbJX" value="1" />
@@ -540,9 +554,6 @@
     <property role="EcuMT" value="3005699363388926626" />
     <property role="3GE5qa" value="FBM-2-32-Sample-Populations" />
     <property role="TrG5h" value="IDomainObject" />
-    <node concept="PrWs8" id="2AQoUlD92Dn" role="PrDN$">
-      <ref role="PrY4T" to="tpck:69Qfsw3InJo" resolve="ISmartReferent" />
-    </node>
   </node>
   <node concept="1TIwiD" id="2AQoUlCARfn">
     <property role="EcuMT" value="3005699363392156631" />
@@ -594,6 +605,53 @@
       <property role="20kJfa" value="facts" />
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="2AQoUlCiK_V" resolve="Fact" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7S1crWPO9mj">
+    <property role="EcuMT" value="9079593021067007379" />
+    <property role="3GE5qa" value="FBM-2-18-Mandatory-Role-Constraints" />
+    <property role="TrG5h" value="MandatoryConstraint" />
+    <ref role="1TJDcQ" node="3neIg_bQ08i" resolve="Constraint" />
+    <node concept="1TJgyj" id="7S1crWPO9my" role="1TKVEi">
+      <property role="IQ2ns" value="9079593021067007394" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="restricts" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="3neIg_bQ08q" resolve="RoleReference" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="7S1crWPO9ml">
+    <property role="3GE5qa" value="FBM-2-16-Constraints" />
+    <property role="TrG5h" value="Modality" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="7S1crWPO9mm" role="M5hS2">
+      <property role="1uS6qo" value="alethic" />
+    </node>
+    <node concept="M4N5e" id="7S1crWPO9mn" role="M5hS2">
+      <property role="1uS6qo" value="deontic" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7S1crWPX4lM">
+    <property role="EcuMT" value="9079593021069346162" />
+    <property role="TrG5h" value="Subtyping" />
+    <property role="3GE5qa" value="FBM-2-10-Subtyping" />
+    <ref role="1TJDcQ" node="3neIg_bFPGC" resolve="FBMEntityType" />
+    <node concept="1TJgyj" id="3neIg_bQ06T" role="1TKVEi">
+      <property role="IQ2ns" value="3877239778790867385" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="supertype" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3neIg_bFPGF" resolve="ObjectType" />
+    </node>
+    <node concept="1TJgyj" id="3neIg_bQ06N" role="1TKVEi">
+      <property role="IQ2ns" value="3877239778790867379" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="subtype" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3neIg_bFPGF" resolve="ObjectType" />
+    </node>
+    <node concept="PrWs8" id="7S1crWPX4lT" role="PzmwI">
+      <ref role="PrY4T" node="2AQoUlCXKwC" resolve="IFactModelElement" />
     </node>
   </node>
 </model>

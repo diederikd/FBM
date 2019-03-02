@@ -31,6 +31,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_FactType;
   private ConceptPresentation props_IDomainObject;
   private ConceptPresentation props_IFactModelElement;
+  private ConceptPresentation props_MandatoryConstraint;
   private ConceptPresentation props_ObjectType;
   private ConceptPresentation props_ObjectTypeName;
   private ConceptPresentation props_Objectification;
@@ -41,7 +42,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Role;
   private ConceptPresentation props_RoleReference;
   private ConceptPresentation props_SID;
-  private ConceptPresentation props_SubType;
+  private ConceptPresentation props_Subtyping;
   private ConceptPresentation props_UniquenessConstraint;
   private ConceptPresentation props_ValueType;
 
@@ -199,6 +200,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IFactModelElement = cpb.create();
         }
         return props_IFactModelElement;
+      case LanguageConceptSwitch.MandatoryConstraint:
+        if (props_MandatoryConstraint == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_MandatoryConstraint = cpb.create();
+        }
+        return props_MandatoryConstraint;
       case LanguageConceptSwitch.ObjectType:
         if (props_ObjectType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -268,13 +276,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SID = cpb.create();
         }
         return props_SID;
-      case LanguageConceptSwitch.SubType:
-        if (props_SubType == null) {
+      case LanguageConceptSwitch.Subtyping:
+        if (props_Subtyping == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          props_SubType = cpb.create();
+          props_Subtyping = cpb.create();
         }
-        return props_SubType;
+        return props_Subtyping;
       case LanguageConceptSwitch.UniquenessConstraint:
         if (props_UniquenessConstraint == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

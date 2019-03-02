@@ -12,32 +12,32 @@ import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
-import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import jetbrains.mps.lang.core.behavior.ISmartReferent__BehaviorDescriptor;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 
-public final class IDomainObject__BehaviorDescriptor extends BaseBHDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a5686a2aa2L, "FBM.structure.IDomainObject");
+public final class MandatoryConstraint__BehaviorDescriptor extends BaseBHDescriptor {
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x7e0131bf35d09593L, "FBM.structure.MandatoryConstraint");
   private static final BehaviorRegistry REGISTRY = ConceptRegistry.getInstance().getBehaviorRegistry();
 
-  public static final SMethod<String> getDescriptionText_id69Qfsw3IqwE = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getDescriptionText").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("69Qfsw3IqwE").registry(REGISTRY).build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<Integer> Arity_id7S1crWPOa3_ = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("Arity").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7S1crWPOa3_").registry(REGISTRY).build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getDescriptionText_id69Qfsw3IqwE);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(Arity_id7S1crWPOa3_);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static String getDescriptionText_id69Qfsw3IqwE(@NotNull SNode __thisNode__, SNode reference) {
-    ISmartReferent__BehaviorDescriptor.getDescriptionText_id69Qfsw3IqwE.invoke0(__thisNode__, MetaAdapterFactory.getInterfaceConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x62763dc803b97bd8L, "jetbrains.mps.lang.core.structure.ISmartReferent"), reference);
-    return "";
+  /*package*/ static int Arity_id7S1crWPOa3_(@NotNull SNode __thisNode__) {
+    return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x7e0131bf35d09593L, 0x7e0131bf35d095a2L, "restricts"))).count();
   }
 
-  /*package*/ IDomainObject__BehaviorDescriptor() {
+  /*package*/ MandatoryConstraint__BehaviorDescriptor() {
     super(REGISTRY);
   }
 
@@ -54,7 +54,7 @@ public final class IDomainObject__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((String) getDescriptionText_id69Qfsw3IqwE(node, (SNode) parameters[0]));
+        return (T) ((Integer) Arity_id7S1crWPOa3_(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

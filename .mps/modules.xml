@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/FBM/FBM.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/FBM/sandbox/FBM.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/FBMExamples/FBMExamples.msd" folder="" />
     </projectModules>
   </component>
 </project>

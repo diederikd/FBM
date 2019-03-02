@@ -5,6 +5,7 @@ package FBM.editor;
 import jetbrains.mps.smodel.action.IReferentPresentationProvider;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
+import FBM.behavior.Role__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -14,7 +15,14 @@ public class PresentationProviders {
     @NotNull
     @Override
     public String getPresentation(@NotNull SNode sourceNode, @NotNull SNode targetNode) {
-      return SPropertyOperations.getString(SNodeOperations.cast(SNodeOperations.getParent(targetNode), MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL, "FBM.structure.FactType")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "-" + SPropertyOperations.getString(targetNode, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+      return (String) Role__BehaviorDescriptor.roleReferencePresentation_id7S1crWPP8zQ.invoke(targetNode);
+    }
+  };
+  public static final IReferentPresentationProvider PRESENTATION_hftasb_a0a0a = new IReferentPresentationProvider() {
+    @NotNull
+    @Override
+    public String getPresentation(@NotNull SNode sourceNode, @NotNull SNode targetNode) {
+      return (String) Role__BehaviorDescriptor.roleReferencePresentation_id7S1crWPP8zQ.invoke(targetNode);
     }
   };
   public static final IReferentPresentationProvider PRESENTATION_ho85ry_a0a1a = new IReferentPresentationProvider() {

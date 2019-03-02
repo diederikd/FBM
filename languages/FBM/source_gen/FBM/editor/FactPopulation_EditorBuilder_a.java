@@ -55,6 +55,7 @@ import de.slisson.mps.tables.runtime.gridmodel.IHeaderNodeDeleteAction;
 import de.slisson.mps.tables.runtime.gridmodel.HeaderGridFactory;
 import de.slisson.mps.tables.runtime.gridmodel.StringHeaderReference;
 import de.slisson.mps.tables.runtime.style.ITableStyleFactory;
+import FBM.editor.FBMStylesheet_StyleSheet.TableHeaderStyleClass;
 import de.slisson.mps.tables.runtime.gridmodel.GridAdapter;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import de.slisson.mps.tables.runtime.gridmodel.GridElementFactory;
@@ -89,16 +90,30 @@ import org.apache.log4j.Logger;
     editorCell.setCellId("Collection_lkhknd_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
-    editorCell.addEditorCell(createConstant_0());
-    editorCell.addEditorCell(createRefCell_0());
-    editorCell.addEditorCell(createConstant_1());
-    editorCell.addEditorCell(createConstant_2());
-    editorCell.addEditorCell(createTable_1());
+    try {
+      getCellFactory().pushCellContext();
+      getCellFactory().addCellContextHints(new String[]{"FBM.editor.FBMhints.table"});
+      editorCell.addEditorCell(createConstant_0());
+      editorCell.addEditorCell(createConstant_1());
+      editorCell.addEditorCell(createRefCell_0());
+      editorCell.addEditorCell(createConstant_2());
+      editorCell.addEditorCell(createConstant_3());
+      editorCell.addEditorCell(createTable_1());
+      setInnerCellsContext(editorCell);
+    } finally {
+      getCellFactory().popCellContext();
+    }
     return editorCell;
   }
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Facts of facttype");
     editorCell.setCellId("Constant_lkhknd_a0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_1() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ":");
+    editorCell.setCellId("Constant_lkhknd_b0");
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -194,18 +209,18 @@ import org.apache.log4j.Logger;
       }
     }
   }
-  private EditorCell createConstant_1() {
+  private EditorCell createConstant_2() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ":");
-    editorCell.setCellId("Constant_lkhknd_c0");
+    editorCell.setCellId("Constant_lkhknd_d0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_2() {
+  private EditorCell createConstant_3() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_lkhknd_d0");
+    editorCell.setCellId("Constant_lkhknd_e0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
@@ -229,23 +244,23 @@ import org.apache.log4j.Logger;
               // column headers 
               {
                 List<HeaderGrid> headerGrids = new ArrayList<HeaderGrid>(1);
-                headerGrids.add(createHeadQuery_lkhknd_a4a(editorContext, node));
+                headerGrids.add(createHeadQuery_lkhknd_a5a(editorContext, node));
                 grid.setColumnHeaders(headerGrids);
               }
 
               // row headers 
               {
                 List<HeaderGrid> headerGrids = new ArrayList<HeaderGrid>(1);
-                headerGrids.add(createHeadQuery_lkhknd_a4a_0(editorContext, node));
+                headerGrids.add(createHeadQuery_lkhknd_a5a_0(editorContext, node));
                 grid.setRowHeaders(headerGrids);
               }
-              final Grid childGrid = createTableCellQuery_lkhknd_a4a(editorContext, node);
+              final Grid childGrid = createTableCellQuery_lkhknd_a5a(editorContext, node);
               childGrid.setSpanX(Math.max(1, grid.getColumnHeadersSizeX()));
               childGrid.setSpanY(Math.max(1, grid.getRowHeadersSizeY()));
               grid.setElement(0, 0, childGrid);
 
               editorCell.value = new TableEditor(editorContext, node, grid);
-              editorCell.value.setCellId("Table_lkhknd_e0");
+              editorCell.value.setCellId("Table_lkhknd_f0");
               Style style = new StyleImpl();
               style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
               editorCell.value.getStyle().putAll(style);
@@ -268,7 +283,7 @@ import org.apache.log4j.Logger;
   private EditorCell createTable_1() {
     return createTable_0(getEditorContext(), myNode);
   }
-  public HeaderGrid createHeadQuery_lkhknd_a4a(final EditorContext editorContext, final SNode node) {
+  public HeaderGrid createHeadQuery_lkhknd_a5a(final EditorContext editorContext, final SNode node) {
     Object queryResult = new Object() {
       public Object query() {
         return SLinkOperations.getChildren(SLinkOperations.getTarget(node, MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568f70830L, 0x29b663a568f70833L, "factType")), MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL, 0x35ceb9094baf5b62L, "Roles"));
@@ -286,13 +301,14 @@ import org.apache.log4j.Logger;
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
         final EditorCell editorCell = null;
+        new TableHeaderStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
         return style;
       }
     }, "attributen");
 
     return grid;
   }
-  public HeaderGrid createHeadQuery_lkhknd_a4a_0(final EditorContext editorContext, final SNode node) {
+  public HeaderGrid createHeadQuery_lkhknd_a5a_0(final EditorContext editorContext, final SNode node) {
     Object queryResult = new Object() {
       public Object query() {
         return SLinkOperations.collect(SLinkOperations.getChildren(node, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568f70830L, 0x29b663a568f70835L, "facts")), MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a5684b097bL, 0x29b663a568d28f78L, "factSID"));
@@ -310,7 +326,7 @@ import org.apache.log4j.Logger;
 
     return grid;
   }
-  public Grid createTableCellQuery_lkhknd_a4a(final EditorContext editorContext, final SNode node) {
+  public Grid createTableCellQuery_lkhknd_a5a(final EditorContext editorContext, final SNode node) {
     final Grid grid = new Grid();
     final GridAdapter gridAdapter = new GridAdapter(grid, editorContext, node);
 

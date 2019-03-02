@@ -21,6 +21,7 @@ import jetbrains.mps.nodeEditor.cells.SPropertyAccessor;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
 import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSPropertyOrNode;
 import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.cellMenu.SPropertySubstituteInfo;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations;
@@ -31,7 +32,6 @@ import java.util.Objects;
 import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.openapi.editor.update.AttributeKind;
-import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -93,6 +93,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
       editorCell.setCellId("property_name");
       Style style = new StyleImpl();
       new Heading1StyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+      style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
       editorCell.getStyle().putAll(style);
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
@@ -193,7 +194,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
       return MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b66L, 0x35ceb9094be78873L, "objecttypes");
     }
     public SAbstractConcept getChildSConcept() {
-      return MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2bL, "FBM.structure.ObjectType");
+      return MetaAdapterFactory.getInterfaceConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568f70828L, "FBM.structure.IFactModelElement");
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -237,7 +238,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     return editorCell;
   }
   private EditorCell createConstant_5() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "facttypes");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "facttypes and constraints");
     editorCell.setCellId("Constant_v9by13_e3a");
     Style style = new StyleImpl();
     new Heading1StyleClass(getEditorContext(), getNode()).apply(style, editorCell);
@@ -257,9 +258,9 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     return editorCell;
   }
   private EditorCell createRefNodeList_1() {
-    AbstractCellListHandler handler = new FactModel_EditorBuilder_a.facttypesListHandler_v9by13_g3a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new FactModel_EditorBuilder_a.facttypesAndConstraintsListHandler_v9by13_g3a(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
-    editorCell.setCellId("refNodeList_facttypes");
+    editorCell.setCellId("refNodeList_facttypesAndConstraints");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
@@ -268,11 +269,11 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class facttypesListHandler_v9by13_g3a extends RefNodeListHandler {
+  private static class facttypesAndConstraintsListHandler_v9by13_g3a extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public facttypesListHandler_v9by13_g3a(SNode ownerNode, EditorContext context) {
+    public facttypesAndConstraintsListHandler_v9by13_g3a(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -282,10 +283,10 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b66L, 0x35ceb9094baf5b67L, "facttypes");
+      return MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b66L, 0x35ceb9094baf5b67L, "facttypesAndConstraints");
     }
     public SAbstractConcept getChildSConcept() {
-      return MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL, "FBM.structure.FactType");
+      return MetaAdapterFactory.getInterfaceConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568f70828L, "FBM.structure.IFactModelElement");
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -295,7 +296,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(facttypesListHandler_v9by13_g3a.this.getNode(), MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b66L, 0x35ceb9094baf5b67L, "facttypes")));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(facttypesAndConstraintsListHandler_v9by13_g3a.this.getNode(), MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b66L, 0x35ceb9094baf5b67L, "facttypesAndConstraints")));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();

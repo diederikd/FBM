@@ -31,19 +31,20 @@ public final class LanguageConceptSwitch {
   public static final int FactType = 19;
   public static final int IDomainObject = 20;
   public static final int IFactModelElement = 21;
-  public static final int ObjectType = 22;
-  public static final int ObjectTypeName = 23;
-  public static final int Objectification = 24;
-  public static final int Position = 25;
-  public static final int Predicate = 26;
-  public static final int PredicateReading = 27;
-  public static final int ReadingRoleText = 28;
-  public static final int Role = 29;
-  public static final int RoleReference = 30;
-  public static final int SID = 31;
-  public static final int SubType = 32;
-  public static final int UniquenessConstraint = 33;
-  public static final int ValueType = 34;
+  public static final int MandatoryConstraint = 22;
+  public static final int ObjectType = 23;
+  public static final int ObjectTypeName = 24;
+  public static final int Objectification = 25;
+  public static final int Position = 26;
+  public static final int Predicate = 27;
+  public static final int PredicateReading = 28;
+  public static final int ReadingRoleText = 29;
+  public static final int Role = 30;
+  public static final int RoleReference = 31;
+  public static final int SID = 32;
+  public static final int Subtyping = 33;
+  public static final int UniquenessConstraint = 34;
+  public static final int ValueType = 35;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L);
@@ -69,6 +70,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x35ceb9094baf5b2dL, FactType);
     builder.put(0x29b663a5686a2aa2L, IDomainObject);
     builder.put(0x29b663a568f70828L, IFactModelElement);
+    builder.put(0x7e0131bf35d09593L, MandatoryConstraint);
     builder.put(0x35ceb9094baf5b2bL, ObjectType);
     builder.put(0x35ceb9094bbb571dL, ObjectTypeName);
     builder.put(0x35ceb9094bd801aaL, Objectification);
@@ -79,7 +81,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x35ceb9094baf5b2cL, Role);
     builder.put(0x35ceb9094bd8021aL, RoleReference);
     builder.put(0x29b663a568d26ac6L, SID);
-    builder.put(0x35ceb9094bd801b2L, SubType);
+    builder.put(0x7e0131bf35f44572L, Subtyping);
     builder.put(0x35ceb9094bd80217L, UniquenessConstraint);
     builder.put(0x35ceb9094bb228e0L, ValueType);
     myIndex = builder.seal();

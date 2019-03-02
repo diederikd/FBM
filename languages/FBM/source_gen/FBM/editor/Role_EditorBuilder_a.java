@@ -14,6 +14,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
+import FBM.behavior.Role__BehaviorDescriptor;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.openapi.editor.menus.transformation.SPropertyInfo;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Property;
@@ -83,8 +84,14 @@ import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteEasily;
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createProperty_0());
-    editorCell.addEditorCell(createConstant_0());
+    if (nodeCondition_9924kr_a1a0()) {
+      editorCell.addEditorCell(createConstant_0());
+    }
+    editorCell.addEditorCell(createConstant_1());
     return editorCell;
+  }
+  private boolean nodeCondition_9924kr_a1a0() {
+    return (boolean) Role__BehaviorDescriptor.isMandatory_id7S1crWPTSy_.invoke(myNode);
   }
   private EditorCell createProperty_0() {
     getCellFactory().pushCellContext();
@@ -98,6 +105,7 @@ import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteEasily;
       editorCell.setCellId("property_name");
       Style style = new StyleImpl();
       new EditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+      style.set(StyleAttributes.UNDERLINED, _StyleParameter_QueryFunction_9924kr_a0a0a());
       editorCell.getStyle().putAll(style);
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
@@ -116,9 +124,18 @@ import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteEasily;
       getCellFactory().popCellContext();
     }
   }
+  private boolean _StyleParameter_QueryFunction_9924kr_a0a0a() {
+    return (boolean) Role__BehaviorDescriptor.isFunctional_id7S1crWPTul8.invoke(getNode());
+  }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ":");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "∙");
     editorCell.setCellId("Constant_9924kr_b0a");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_1() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ":");
+    editorCell.setCellId("Constant_9924kr_c0a");
     editorCell.setDefaultText("");
     return editorCell;
   }

@@ -13,16 +13,19 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
   private final BHDescriptor myFact__BehaviorDescriptor = new Fact__BehaviorDescriptor();
-  private final BHDescriptor myIDomainObject__BehaviorDescriptor = new IDomainObject__BehaviorDescriptor();
   private final BHDescriptor mySID__BehaviorDescriptor = new SID__BehaviorDescriptor();
   private final BHDescriptor myFactPopulation__BehaviorDescriptor = new FactPopulation__BehaviorDescriptor();
+  private final BHDescriptor myRole__BehaviorDescriptor = new Role__BehaviorDescriptor();
   private final BHDescriptor myFactType__BehaviorDescriptor = new FactType__BehaviorDescriptor();
   private final BHDescriptor myFactModel__BehaviorDescriptor = new FactModel__BehaviorDescriptor();
   private final BHDescriptor myDomainObjectType__BehaviorDescriptor = new DomainObjectType__BehaviorDescriptor();
+  private final BHDescriptor myEntityType__BehaviorDescriptor = new EntityType__BehaviorDescriptor();
   private final BHDescriptor myPosition__BehaviorDescriptor = new Position__BehaviorDescriptor();
   private final BHDescriptor myPredicateReading__BehaviorDescriptor = new PredicateReading__BehaviorDescriptor();
   private final BHDescriptor myObjectTypeName__BehaviorDescriptor = new ObjectTypeName__BehaviorDescriptor();
   private final BHDescriptor myUniquenessConstraint__BehaviorDescriptor = new UniquenessConstraint__BehaviorDescriptor();
+  private final BHDescriptor myMandatoryConstraint__BehaviorDescriptor = new MandatoryConstraint__BehaviorDescriptor();
+  private final BHDescriptor mySubtyping__BehaviorDescriptor = new Subtyping__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -34,28 +37,34 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 0:
         return myDomainObjectType__BehaviorDescriptor;
       case 1:
-        return myFact__BehaviorDescriptor;
+        return myEntityType__BehaviorDescriptor;
       case 2:
-        return myFactModel__BehaviorDescriptor;
+        return myFact__BehaviorDescriptor;
       case 3:
-        return myFactPopulation__BehaviorDescriptor;
+        return myFactModel__BehaviorDescriptor;
       case 4:
-        return myFactType__BehaviorDescriptor;
+        return myFactPopulation__BehaviorDescriptor;
       case 5:
-        return myIDomainObject__BehaviorDescriptor;
+        return myFactType__BehaviorDescriptor;
       case 6:
-        return myObjectTypeName__BehaviorDescriptor;
+        return myMandatoryConstraint__BehaviorDescriptor;
       case 7:
-        return myPosition__BehaviorDescriptor;
+        return myObjectTypeName__BehaviorDescriptor;
       case 8:
-        return myPredicateReading__BehaviorDescriptor;
+        return myPosition__BehaviorDescriptor;
       case 9:
-        return mySID__BehaviorDescriptor;
+        return myPredicateReading__BehaviorDescriptor;
       case 10:
+        return myRole__BehaviorDescriptor;
+      case 11:
+        return mySID__BehaviorDescriptor;
+      case 12:
+        return mySubtyping__BehaviorDescriptor;
+      case 13:
         return myUniquenessConstraint__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb228daL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a5684b097bL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b66L), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568f70830L), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a5686a2aa2L), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bbb571dL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb58e0cL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb84f7cL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568d26ac6L), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb228daL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb228ddL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a5684b097bL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b66L), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568f70830L), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x7e0131bf35d09593L), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bbb571dL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb58e0cL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb84f7cL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2cL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568d26ac6L), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x7e0131bf35f44572L), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L)).seal();
 }

@@ -903,5 +903,12 @@
   <node concept="1M2fIO" id="2AQoUlD92Dc">
     <ref role="1M2myG" to="jc24:3neIg_bFPHA" resolve="FactModel" />
   </node>
+  <node concept="1M2fIO" id="2AQoUlDdsyi">
+    <ref role="1M2myG" to="jc24:2AQoUlCXKwC" resolve="IFactModelElement" />
+  </node>
+  <node concept="1M2fIO" id="7S1crWPPf6m">
+    <property role="3GE5qa" value="FBM-2-16-Constraints" />
+    <ref role="1M2myG" to="jc24:3neIg_bQ08i" resolve="Constraint" />
+  </node>
 </model>
 
