@@ -378,7 +378,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
       return MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b66L, 0x29b663a56860ee4aL, "objects");
     }
     public SAbstractConcept getChildSConcept() {
-      return MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568513d6bL, "FBM.structure.DomainObject");
+      return MetaAdapterFactory.getInterfaceConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568f70828L, "FBM.structure.IFactModelElement");
     }
 
     public EditorCell createNodeCell(SNode elementNode) {

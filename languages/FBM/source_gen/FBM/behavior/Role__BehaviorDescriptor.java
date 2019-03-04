@@ -13,9 +13,9 @@ import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
+import org.jetbrains.mps.openapi.model.SNode;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
@@ -34,8 +34,10 @@ public final class Role__BehaviorDescriptor extends BaseBHDescriptor {
   public static final SMethod<String> roleReferencePresentation_id7S1crWPP8zQ = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("roleReferencePresentation").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7S1crWPP8zQ").registry(REGISTRY).build();
   public static final SMethod<Boolean> isMandatory_id7S1crWPTSy_ = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isMandatory").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7S1crWPTSy_").registry(REGISTRY).build();
   public static final SMethod<Boolean> isFunctional_id7S1crWPTul8 = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isFunctional").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7S1crWPTul8").registry(REGISTRY).build();
+  public static final SMethod<Boolean> isUnique_id5HdZBjKzsGu = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isUnique").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5HdZBjKzsGu").registry(REGISTRY).build();
+  public static final SMethod<List<SNode>> restrictingUniquenessConstraints_id5HdZBjKSXIn = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("restrictingUniquenessConstraints").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5HdZBjKSXIn").registry(REGISTRY).build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(roleReferencePresentation_id7S1crWPP8zQ, isMandatory_id7S1crWPTSy_, isFunctional_id7S1crWPTul8);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(roleReferencePresentation_id7S1crWPP8zQ, isMandatory_id7S1crWPTSy_, isFunctional_id7S1crWPTul8, isUnique_id5HdZBjKzsGu, restrictingUniquenessConstraints_id5HdZBjKSXIn);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -56,6 +58,16 @@ public final class Role__BehaviorDescriptor extends BaseBHDescriptor {
         return SPropertyOperations.hasEnumValue(it, MetaAdapterFactory.getProperty(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80212L, 0x7e0131bf35d0959cL, "modality"), null);
       }
     }), MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, 0x35ceb9094bd80220L, "restricts")), MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd8021aL, 0x35ceb9094bd8021bL, "role"))).contains(__thisNode__);
+  }
+  /*package*/ static boolean isUnique_id5HdZBjKzsGu(@NotNull SNode __thisNode__) {
+    return Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.collectMany(SModelOperations.nodes(SNodeOperations.getModel(__thisNode__), MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, "FBM.structure.UniquenessConstraint")), MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, 0x35ceb9094bd80220L, "restricts")), MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd8021aL, 0x35ceb9094bd8021bL, "role"))).contains(__thisNode__);
+  }
+  /*package*/ static List<SNode> restrictingUniquenessConstraints_id5HdZBjKSXIn(@NotNull final SNode __thisNode__) {
+    return ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(__thisNode__), MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, "FBM.structure.UniquenessConstraint"))).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(it, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd80217L, 0x35ceb9094bd80220L, "restricts")), MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd8021aL, 0x35ceb9094bd8021bL, "role"))).contains(__thisNode__);
+      }
+    }).toListSequence();
   }
 
   /*package*/ Role__BehaviorDescriptor() {
@@ -80,6 +92,10 @@ public final class Role__BehaviorDescriptor extends BaseBHDescriptor {
         return (T) ((Boolean) isMandatory_id7S1crWPTSy_(node));
       case 2:
         return (T) ((Boolean) isFunctional_id7S1crWPTul8(node));
+      case 3:
+        return (T) ((Boolean) isUnique_id5HdZBjKzsGu(node));
+      case 4:
+        return (T) ((List<SNode>) restrictingUniquenessConstraints_id5HdZBjKSXIn(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

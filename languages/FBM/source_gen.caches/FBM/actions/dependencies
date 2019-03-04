@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="FBM.actions.ActionAspectDescriptorImpl">
+    <classNode dependClassName="FBM.actions.NewDomainObject" />
     <classNode dependClassName="FBM.actions.NewFact" />
     <classNode dependClassName="FBM.actions.NewPredicateReading" />
     <classNode dependClassName="java.lang.Override" />
@@ -12,6 +13,14 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode extendsClassName="jetbrains.mps.actions.descriptor.BaseActionAspectDescriptor" />
     <classNode extendsClassName="jetbrains.mps.openapi.actions.descriptor.ActionAspectDescriptor" />
+  </dependency>
+  <dependency className="FBM.actions.NewDomainObject">
+    <classNode dependClassName="FBM.behavior.DomainObjectPopulation__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.openapi.actions.descriptor.NodeFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SModel" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
   <dependency className="FBM.actions.NewFact">
     <classNode dependClassName="FBM.behavior.FactPopulation__BehaviorDescriptor" />

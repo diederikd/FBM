@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="706zh9lygrl4a6w8auzqa5pa5i8fpx2">
-  <files names="Constraint_Constraints.java:ConstraintsAspectDescriptor.java:DataType_Constraints.java:DomainObjectType_Constraints.java:FactModel_Constraints.java:FactRole_Constraints.java:Fact_Constraints.java:IFactModelElement_Constraints.java:ObjectType_Constraints.java:Position_Constraints.java:PredicateReading_Constraints.java:Predicate_Constraints.java:ReadingRoleText_Constraints.java:Role_Constraints.java" />
+<product version="3" modelHash="43geggk9e7ilz2rqlw9bxz4tzixmssh">
+  <files names="CanonicalDataValueBoolean_Constraints.java:CanonicalDataValueInteger_Constraints.java:CanonicalDataValueString_Constraints.java:Constraint_Constraints.java:ConstraintsAspectDescriptor.java:DataType_Constraints.java:DomainObjectPopulation_Constraints.java:DomainObjectReference_Constraints.java:DomainObjectType_Constraints.java:DomainObject_Constraints.java:EntityType_Constraints.java:FactModel_Constraints.java:FactPopulation_Constraints.java:FactRole_Constraints.java:Fact_Constraints.java:IFactModelElement_Constraints.java:ObjectType_Constraints.java:Objectification_Constraints.java:Position_Constraints.java:PredicateReading_Constraints.java:Predicate_Constraints.java:ReadingRoleText_Constraints.java:Role_Constraints.java:ValueType_Constraints.java" />
 </product>
 

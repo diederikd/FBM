@@ -109,19 +109,19 @@
     <property role="TrG5h" value="FactModel" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="3neIg_bTSxN" role="1TKVEi">
-      <property role="IQ2ns" value="3877239778791884915" />
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="objecttypes" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="2AQoUlCXKwC" resolve="IFactModelElement" />
-    </node>
     <node concept="1TJgyj" id="3neIg_bFR6X" role="1TKVEi">
       <property role="IQ2ns" value="3877239778788209085" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="sysobjecttypes" />
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="3neIg_bFPGF" resolve="ObjectType" />
+    </node>
+    <node concept="1TJgyj" id="3neIg_bTSxN" role="1TKVEi">
+      <property role="IQ2ns" value="3877239778791884915" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="objecttypes" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="2AQoUlCXKwC" resolve="IFactModelElement" />
     </node>
     <node concept="1TJgyj" id="3neIg_bFPHB" role="1TKVEi">
       <property role="IQ2ns" value="3877239778788203367" />
@@ -135,7 +135,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="objects" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="2AQoUlCkjPF" resolve="DomainObject" />
+      <ref role="20lvS9" node="2AQoUlCXKwC" resolve="IFactModelElement" />
     </node>
     <node concept="1TJgyj" id="2AQoUlCkCaG" role="1TKVEi">
       <property role="IQ2ns" value="3005699363387376300" />
@@ -146,6 +146,9 @@
     </node>
     <node concept="PrWs8" id="3neIg_bFQue" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="7S1crWQyNc9" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
   <node concept="1TIwiD" id="3neIg_bFPGC">
@@ -178,6 +181,12 @@
       <property role="20kJfa" value="alternateName" />
       <ref role="20lvS9" node="3neIg_bIPst" resolve="ObjectTypeName" />
     </node>
+    <node concept="1TJgyj" id="7FMuq_Jnm57" role="1TKVEi">
+      <property role="IQ2ns" value="8859277185616011591" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="objectifies" />
+      <ref role="20lvS9" node="3neIg_bQ06E" resolve="Objectification" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3neIg_bGyzt">
     <property role="EcuMT" value="3877239778788387037" />
@@ -192,6 +201,11 @@
     </node>
     <node concept="PrWs8" id="7S1crWPXI_f" role="PzmwI">
       <ref role="PrY4T" node="2AQoUlCXKwC" resolve="IFactModelElement" />
+    </node>
+    <node concept="1TJgyi" id="7FMuq_JoUbc" role="1TKVEl">
+      <property role="IQ2nx" value="8859277185616421580" />
+      <property role="TrG5h" value="showIdentification" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
   </node>
   <node concept="1TIwiD" id="3neIg_bGyzw">
@@ -331,17 +345,10 @@
     <property role="TrG5h" value="Objectification" />
     <property role="3GE5qa" value="FBM-2-13-Objectification" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="3neIg_bQ06H" role="1TKVEi">
-      <property role="IQ2ns" value="3877239778790867373" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="domainObjectType" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="3neIg_bGyzq" resolve="DomainObjectType" />
-    </node>
     <node concept="1TJgyj" id="3neIg_bQ06J" role="1TKVEi">
       <property role="IQ2ns" value="3877239778790867375" />
       <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="factType" />
+      <property role="20kJfa" value="FactType" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="3neIg_bFPGH" resolve="FactType" />
     </node>
@@ -450,6 +457,29 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="3neIg_bGyzq" resolve="DomainObjectType" />
     </node>
+    <node concept="1TJgyj" id="7FMuq_JDi9N" role="1TKVEi">
+      <property role="IQ2ns" value="8859277185620714099" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="objectifiedFact" />
+      <ref role="20lvS9" node="2AQoUlCiK_V" resolve="Fact" />
+    </node>
+    <node concept="PrWs8" id="7S1crWQ9Q27" role="PzmwI">
+      <ref role="PrY4T" node="2AQoUlCXKwC" resolve="IFactModelElement" />
+    </node>
+    <node concept="1TJgyj" id="7S1crWQfZcF" role="1TKVEi">
+      <property role="IQ2ns" value="9079593021074305835" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="DomainObjectSID" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="2AQoUlCOAF6" resolve="SID" />
+    </node>
+    <node concept="1TJgyj" id="7S1crWQbltF" role="1TKVEi">
+      <property role="IQ2ns" value="9079593021073086315" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="identifyingFact" />
+      <property role="20lbJX" value="0..1" />
+      <ref role="20lvS9" node="2AQoUlCiK_V" resolve="Fact" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2AQoUlCkCaA">
     <property role="EcuMT" value="3005699363387376294" />
@@ -457,6 +487,9 @@
     <property role="3GE5qa" value="FBM-2-15-Data-Type-and-Data-Value" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="2AQoUlCkCaB" resolve="DataValue" />
+    <node concept="PrWs8" id="7S1crWQjrOa" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2AQoUlCkCaB">
     <property role="EcuMT" value="3005699363387376295" />
@@ -652,6 +685,42 @@
     </node>
     <node concept="PrWs8" id="7S1crWPX4lT" role="PzmwI">
       <ref role="PrY4T" node="2AQoUlCXKwC" resolve="IFactModelElement" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7S1crWQ7Xdc">
+    <property role="EcuMT" value="9079593021072200524" />
+    <property role="TrG5h" value="DomainObjectPopulation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="7S1crWQ7Xdd" role="1TKVEi">
+      <property role="IQ2ns" value="9079593021072200525" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="objecttype" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3neIg_bGyzq" resolve="DomainObjectType" />
+    </node>
+    <node concept="1TJgyj" id="7S1crWQ7Xdh" role="1TKVEi">
+      <property role="IQ2ns" value="9079593021072200529" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="objects" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="2AQoUlCkjPF" resolve="DomainObject" />
+    </node>
+    <node concept="PrWs8" id="7S1crWQ8SjE" role="PzmwI">
+      <ref role="PrY4T" node="2AQoUlCXKwC" resolve="IFactModelElement" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="7FMuq_K0nnj">
+    <property role="TrG5h" value="InstantiationMethod" />
+    <property role="3GE5qa" value="FBM-2-14-Derivation" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="7FMuq_K0nnk" role="M5hS2">
+      <property role="1uS6qo" value="Asserted" />
+    </node>
+    <node concept="M4N5e" id="7FMuq_K0nnl" role="M5hS2">
+      <property role="1uS6qo" value="Derived" />
+    </node>
+    <node concept="M4N5e" id="7FMuq_K0nno" role="M5hS2">
+      <property role="1uS6qo" value="Semiderived" />
     </node>
   </node>
 </model>

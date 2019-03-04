@@ -25,6 +25,13 @@ public class PresentationProviders {
       return (String) Role__BehaviorDescriptor.roleReferencePresentation_id7S1crWPP8zQ.invoke(targetNode);
     }
   };
+  public static final IReferentPresentationProvider PRESENTATION_hftasb_a0a0a_0 = new IReferentPresentationProvider() {
+    @NotNull
+    @Override
+    public String getPresentation(@NotNull SNode sourceNode, @NotNull SNode targetNode) {
+      return (String) Role__BehaviorDescriptor.roleReferencePresentation_id7S1crWPP8zQ.invoke(targetNode);
+    }
+  };
   public static final IReferentPresentationProvider PRESENTATION_ho85ry_a0a1a = new IReferentPresentationProvider() {
     @NotNull
     @Override

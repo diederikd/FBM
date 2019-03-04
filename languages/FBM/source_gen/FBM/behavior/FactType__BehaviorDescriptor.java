@@ -33,8 +33,9 @@ public final class FactType__BehaviorDescriptor extends BaseBHDescriptor {
 
   public static final SMethod<Integer> Arity_id3neIg_bH6jP = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("Arity").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3neIg_bH6jP").registry(REGISTRY).build();
   public static final SMethod<Scope> getScope_id52_Geb4QDV$ = new SMethodBuilder<Scope>(new SJavaCompoundTypeImpl(Scope.class)).name("getScope").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("52_Geb4QDV$").registry(REGISTRY).build(SMethodBuilder.createJavaParameter((Class<SAbstractConcept>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<Void> addDefaultPredicate_id7S1crWQKwHt = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("addDefaultPredicate").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7S1crWQKwHt").registry(REGISTRY).build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(Arity_id3neIg_bH6jP, getScope_id52_Geb4QDV$);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(Arity_id3neIg_bH6jP, getScope_id52_Geb4QDV$, addDefaultPredicate_id7S1crWQKwHt);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -48,6 +49,15 @@ public final class FactType__BehaviorDescriptor extends BaseBHDescriptor {
       return ListScope.forNamedElements(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL, 0x35ceb9094baf5b62L, "Roles")));
     }
     return null;
+  }
+  /*package*/ static void addDefaultPredicate_id7S1crWQKwHt(@NotNull SNode __thisNode__) {
+    SNode predicate = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb58e03L, "FBM.structure.Predicate"));
+    for (SNode role : ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL, 0x35ceb9094baf5b62L, "Roles")))) {
+      SNode position = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb58e0cL, "FBM.structure.Position"));
+      SLinkOperations.setTarget(position, MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb58e0cL, 0x35ceb9094bb58e11L, "role"), role);
+      ListSequence.fromList(SLinkOperations.getChildren(predicate, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb58e03L, 0x35ceb9094bb84fbeL, "roleposition"))).addElement(position);
+    }
+    ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL, 0x35ceb9094bb58e09L, "Predicates"))).addElement(predicate);
   }
 
   /*package*/ FactType__BehaviorDescriptor() {
@@ -70,6 +80,9 @@ public final class FactType__BehaviorDescriptor extends BaseBHDescriptor {
         return (T) ((Integer) Arity_id3neIg_bH6jP(node));
       case 1:
         return (T) ((Scope) getScope_id52_Geb4QDV$(node, (SAbstractConcept) parameters[0], (SNode) parameters[1]));
+      case 2:
+        addDefaultPredicate_id7S1crWQKwHt(node);
+        return null;
       default:
         throw new BHMethodNotFoundException(this, method);
     }

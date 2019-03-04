@@ -13,9 +13,9 @@ public class NewFact {
   public static class NodeFactory_3005699363398159785 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
       {
-        final SNode factTable = enclosingNode;
-        if (SNodeOperations.isInstanceOf(factTable, MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568f70830L, "FBM.structure.FactPopulation"))) {
-          FactPopulation__BehaviorDescriptor.newFact_id2AQoUlCZ5fF.invoke(factTable);
+        final SNode factPopulation = enclosingNode;
+        if (SNodeOperations.isInstanceOf(factPopulation, MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568f70830L, "FBM.structure.FactPopulation"))) {
+          FactPopulation__BehaviorDescriptor.newFact_id2AQoUlCZ5fF.invoke(factPopulation);
         }
       }
     }

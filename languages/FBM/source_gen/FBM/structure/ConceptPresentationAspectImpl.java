@@ -18,6 +18,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DataType;
   private ConceptPresentation props_DataValue;
   private ConceptPresentation props_DomainObject;
+  private ConceptPresentation props_DomainObjectPopulation;
   private ConceptPresentation props_DomainObjectReference;
   private ConceptPresentation props_DomainObjectType;
   private ConceptPresentation props_DomainValue;
@@ -112,6 +113,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DomainObject = cpb.create();
         }
         return props_DomainObject;
+      case LanguageConceptSwitch.DomainObjectPopulation:
+        if (props_DomainObjectPopulation == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x7e0131bf361fd34cL, 0x7e0131bf361fd34dL, "objecttype", "", "");
+          props_DomainObjectPopulation = cpb.create();
+        }
+        return props_DomainObjectPopulation;
       case LanguageConceptSwitch.DomainObjectReference:
         if (props_DomainObjectReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -223,7 +231,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Objectification:
         if (props_Objectification == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Objectification");
+          cpb.presentationByReference(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bd801aaL, 0x35ceb9094bd801afL, "FactType", "", "");
           props_Objectification = cpb.create();
         }
         return props_Objectification;

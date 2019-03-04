@@ -21,13 +21,13 @@ import jetbrains.mps.smodel.ConceptDescendantsCache;
 import jetbrains.mps.lang.editor.menus.substitute.DefaultSubstituteMenuLookup;
 import jetbrains.mps.smodel.language.LanguageRegistry;
 
-public class DomainObject_SubstituteMenu extends SubstituteMenuBase {
+public class DomainObjectPopulation_SubstituteMenu extends SubstituteMenuBase {
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new DomainObject_SubstituteMenu.SMP_ReferenceScope_npx04a_a(), MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568513d6bL, "FBM.structure.DomainObject")));
-    result.add(new DomainObject_SubstituteMenu.SMP_Subconcepts_npx04a_b());
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new DomainObjectPopulation_SubstituteMenu.SMP_ReferenceScope_sz3bjo_a(), MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x7e0131bf361fd34cL, "FBM.structure.DomainObjectPopulation")));
+    result.add(new DomainObjectPopulation_SubstituteMenu.SMP_Subconcepts_sz3bjo_b());
     return result;
   }
 
@@ -35,7 +35,7 @@ public class DomainObject_SubstituteMenu extends SubstituteMenuBase {
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for DomainObject. Generated from implicit smart reference attribute.", new SNodePointer("r:7472105b-d028-45fb-8323-3d9fef84b5f3(FBM.structure)", "3005699363387293035")));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for DomainObjectPopulation. Generated from implicit smart reference attribute.", new SNodePointer("r:7472105b-d028-45fb-8323-3d9fef84b5f3(FBM.structure)", "9079593021072200524")));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -44,11 +44,11 @@ public class DomainObject_SubstituteMenu extends SubstituteMenuBase {
   }
 
 
-  public class SMP_ReferenceScope_npx04a_a extends ReferenceScopeSubstituteMenuPart {
+  public class SMP_ReferenceScope_sz3bjo_a extends ReferenceScopeSubstituteMenuPart {
 
-    public SMP_ReferenceScope_npx04a_a() {
+    public SMP_ReferenceScope_sz3bjo_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
-      super((SAbstractConcept) MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568513d6bL, "FBM.structure.DomainObject"), MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568513d6bL, 0x29b663a568513d6cL, "isInstanceOf"));
+      super((SAbstractConcept) MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x7e0131bf361fd34cL, "FBM.structure.DomainObjectPopulation"), MetaAdapterFactory.getReferenceLink(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x7e0131bf361fd34cL, 0x7e0131bf361fd34dL, "objecttype"));
     }
     @NotNull
     @Override
@@ -63,15 +63,15 @@ public class DomainObject_SubstituteMenu extends SubstituteMenuBase {
     }
 
   }
-  public class SMP_Subconcepts_npx04a_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
+  public class SMP_Subconcepts_sz3bjo_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568513d6bL, "FBM.structure.DomainObject"));
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(MetaAdapterFactory.getConcept(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x7e0131bf361fd34cL, "FBM.structure.DomainObjectPopulation"));
     }
     @NotNull
     @Override
     public List<SubstituteMenuItem> createItems(SubstituteMenuContext context) {
       context.getEditorMenuTrace().pushTraceInfo();
-      context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("include menus for all the direct subconcepts of " + "DomainObject", null));
+      context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("include menus for all the direct subconcepts of " + "DomainObjectPopulation", null));
       try {
         return super.createItems(context);
       } finally {

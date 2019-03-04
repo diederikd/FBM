@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root nodeRef="r:3be27ba9-fded-467f-acee-7ccdbb278c94(FBMTests.Tests)/6579194408870720038">
+    <file name="TestUniqueness_Test.java">
+      <node id="6579194408870720038" at="26,32,27,25" concept="6" />
+      <node id="6579194408870945898" at="31,73,32,84" concept="1" />
+      <node id="6579194408870720516" at="35,73,36,84" concept="1" />
+      <node id="6579194408870720524" at="39,73,40,84" concept="1" />
+      <node id="6579194408870720038" at="45,52,46,19" concept="6" />
+      <node id="6579194408870945898" at="50,75,51,242" concept="4" />
+      <node id="6579194408870945898" at="51,242,52,123" concept="1" />
+      <node id="6579194408870720516" at="54,75,55,242" concept="4" />
+      <node id="6579194408870720516" at="55,242,56,123" concept="1" />
+      <node id="6579194408870720524" at="58,75,59,242" concept="4" />
+      <node id="6579194408870720524" at="59,242,60,123" concept="1" />
+      <node id="6579194408870720038" at="21,0,23,0" concept="5" trace="ourParamCache" />
+      <node id="6579194408870720038" at="23,0,25,0" concept="2" trace="myWithCommandRule" />
+      <node id="6579194408870720038" at="26,0,29,0" concept="0" trace="TestUniqueness_Test#()V" />
+      <node id="6579194408870720038" at="45,0,48,0" concept="0" trace="TestBody#(Ljetbrains/mps/lang/test/runtime/TransformationTest;)V" />
+      <node id="6579194408870945898" at="30,0,34,0" concept="3" trace="test_NodeErrorCheck6579194408870945898#()V" />
+      <node id="6579194408870720516" at="34,0,38,0" concept="3" trace="test_NodeErrorCheck6579194408870720516#()V" />
+      <node id="6579194408870720524" at="38,0,42,0" concept="3" trace="test_NodeErrorCheck6579194408870720524#()V" />
+      <node id="6579194408870945898" at="50,0,54,0" concept="3" trace="test_NodeErrorCheck6579194408870945898#()V" />
+      <node id="6579194408870720516" at="54,0,58,0" concept="3" trace="test_NodeErrorCheck6579194408870720516#()V" />
+      <node id="6579194408870720524" at="58,0,62,0" concept="3" trace="test_NodeErrorCheck6579194408870720524#()V" />
+      <scope id="6579194408870720038" at="26,32,27,25" />
+      <scope id="6579194408870945898" at="31,73,32,84" />
+      <scope id="6579194408870720516" at="35,73,36,84" />
+      <scope id="6579194408870720524" at="39,73,40,84" />
+      <scope id="6579194408870720038" at="45,52,46,19" />
+      <scope id="6579194408870945898" at="50,75,52,123">
+        <var name="operation" id="6579194408870945898" />
+      </scope>
+      <scope id="6579194408870720516" at="54,75,56,123">
+        <var name="operation" id="6579194408870720516" />
+      </scope>
+      <scope id="6579194408870720524" at="58,75,60,123">
+        <var name="operation" id="6579194408870720524" />
+      </scope>
+      <scope id="6579194408870720038" at="26,0,29,0" />
+      <scope id="6579194408870720038" at="45,0,48,0">
+        <var name="owner" id="6579194408870720038" />
+      </scope>
+      <scope id="6579194408870945898" at="30,0,34,0" />
+      <scope id="6579194408870720516" at="34,0,38,0" />
+      <scope id="6579194408870720524" at="38,0,42,0" />
+      <scope id="6579194408870945898" at="50,0,54,0" />
+      <scope id="6579194408870720516" at="54,0,58,0" />
+      <scope id="6579194408870720524" at="58,0,62,0" />
+      <unit id="6579194408870720038" at="43,0,64,0" name="FBMTests.Tests.TestUniqueness_Test$TestBody" />
+      <unit id="6579194408870720038" at="19,0,65,0" name="FBMTests.Tests.TestUniqueness_Test" />
+    </file>
+  </root>
+  <root nodeRef="r:3be27ba9-fded-467f-acee-7ccdbb278c94(FBMTests.Tests)/8859277185616405593">
+    <file name="TestObjectification_Test.java">
+      <node id="8859277185616405593" at="26,37,27,25" concept="6" />
+      <node id="8859277185626517108" at="31,96,32,112" concept="1" />
+      <node id="8859277185616405593" at="37,52,38,19" concept="6" />
+      <node id="8859277185626517108" at="42,98,43,242" concept="4" />
+      <node id="8859277185626517108" at="43,242,44,123" concept="1" />
+      <node id="8859277185616405593" at="21,0,23,0" concept="5" trace="ourParamCache" />
+      <node id="8859277185616405593" at="23,0,25,0" concept="2" trace="myWithCommandRule" />
+      <node id="8859277185616405593" at="26,0,29,0" concept="0" trace="TestObjectification_Test#()V" />
+      <node id="8859277185616405593" at="37,0,40,0" concept="0" trace="TestBody#(Ljetbrains/mps/lang/test/runtime/TransformationTest;)V" />
+      <node id="8859277185626517108" at="30,0,34,0" concept="3" trace="test_ScopeOf_DomainObject_objectifiedFact_8859277185624432693#()V" />
+      <node id="8859277185626517108" at="42,0,46,0" concept="3" trace="test_ScopeOf_DomainObject_objectifiedFact_8859277185624432693#()V" />
+      <scope id="8859277185616405593" at="26,37,27,25" />
+      <scope id="8859277185626517108" at="31,96,32,112" />
+      <scope id="8859277185616405593" at="37,52,38,19" />
+      <scope id="8859277185626517108" at="42,98,44,123">
+        <var name="operation" id="8859277185626517108" />
+      </scope>
+      <scope id="8859277185616405593" at="26,0,29,0" />
+      <scope id="8859277185616405593" at="37,0,40,0">
+        <var name="owner" id="8859277185616405593" />
+      </scope>
+      <scope id="8859277185626517108" at="30,0,34,0" />
+      <scope id="8859277185626517108" at="42,0,46,0" />
+      <unit id="8859277185616405593" at="35,0,48,0" name="FBMTests.Tests.TestObjectification_Test$TestBody" />
+      <unit id="8859277185616405593" at="19,0,49,0" name="FBMTests.Tests.TestObjectification_Test" />
+    </file>
+  </root>
+  <root nodeRef="r:3be27ba9-fded-467f-acee-7ccdbb278c94(FBMTests.Tests)/8859277185622716690">
+    <file name="TestEntityWithoutIdentification_Test.java">
+      <node id="8859277185622716690" at="26,49,27,25" concept="6" />
+      <node id="8859277185626763034" at="31,102,32,130" concept="1" />
+      <node id="8859277185626763039" at="35,98,36,126" concept="1" />
+      <node id="8859277185622716690" at="41,52,42,19" concept="6" />
+      <node id="8859277185626763034" at="46,104,47,242" concept="4" />
+      <node id="8859277185626763034" at="47,242,48,123" concept="1" />
+      <node id="8859277185626763039" at="50,100,51,242" concept="4" />
+      <node id="8859277185626763039" at="51,242,52,123" concept="1" />
+      <node id="8859277185622716690" at="21,0,23,0" concept="5" trace="ourParamCache" />
+      <node id="8859277185622716690" at="23,0,25,0" concept="2" trace="myWithCommandRule" />
+      <node id="8859277185622716690" at="26,0,29,0" concept="0" trace="TestEntityWithoutIdentification_Test#()V" />
+      <node id="8859277185622716690" at="41,0,44,0" concept="0" trace="TestBody#(Ljetbrains/mps/lang/test/runtime/TransformationTest;)V" />
+      <node id="8859277185626763034" at="30,0,34,0" concept="3" trace="test_ScopeOf_DomainObjectReference_domainObject_8859277185622716794#()V" />
+      <node id="8859277185626763039" at="34,0,38,0" concept="3" trace="test_ScopeOf_CanonicalDataValueInteger_isOf_8859277185622716785#()V" />
+      <node id="8859277185626763034" at="46,0,50,0" concept="3" trace="test_ScopeOf_DomainObjectReference_domainObject_8859277185622716794#()V" />
+      <node id="8859277185626763039" at="50,0,54,0" concept="3" trace="test_ScopeOf_CanonicalDataValueInteger_isOf_8859277185622716785#()V" />
+      <scope id="8859277185622716690" at="26,49,27,25" />
+      <scope id="8859277185626763034" at="31,102,32,130" />
+      <scope id="8859277185626763039" at="35,98,36,126" />
+      <scope id="8859277185622716690" at="41,52,42,19" />
+      <scope id="8859277185626763034" at="46,104,48,123">
+        <var name="operation" id="8859277185626763034" />
+      </scope>
+      <scope id="8859277185626763039" at="50,100,52,123">
+        <var name="operation" id="8859277185626763039" />
+      </scope>
+      <scope id="8859277185622716690" at="26,0,29,0" />
+      <scope id="8859277185622716690" at="41,0,44,0">
+        <var name="owner" id="8859277185622716690" />
+      </scope>
+      <scope id="8859277185626763034" at="30,0,34,0" />
+      <scope id="8859277185626763039" at="34,0,38,0" />
+      <scope id="8859277185626763034" at="46,0,50,0" />
+      <scope id="8859277185626763039" at="50,0,54,0" />
+      <unit id="8859277185622716690" at="39,0,56,0" name="FBMTests.Tests.TestEntityWithoutIdentification_Test$TestBody" />
+      <unit id="8859277185622716690" at="19,0,57,0" name="FBMTests.Tests.TestEntityWithoutIdentification_Test" />
+    </file>
+  </root>
+  <root nodeRef="r:3be27ba9-fded-467f-acee-7ccdbb278c94(FBMTests.Tests)/8859277185626762079">
+    <file name="TestEntityWithIdentification_Test.java">
+      <node id="8859277185626762079" at="26,46,27,25" concept="6" />
+      <node id="8859277185626762349" at="31,102,32,127" concept="1" />
+      <node id="8859277185626762360" at="35,102,36,127" concept="1" />
+      <node id="8859277185626762079" at="41,52,42,19" concept="6" />
+      <node id="8859277185626762349" at="46,104,47,242" concept="4" />
+      <node id="8859277185626762349" at="47,242,48,123" concept="1" />
+      <node id="8859277185626762360" at="50,104,51,242" concept="4" />
+      <node id="8859277185626762360" at="51,242,52,123" concept="1" />
+      <node id="8859277185626762079" at="21,0,23,0" concept="5" trace="ourParamCache" />
+      <node id="8859277185626762079" at="23,0,25,0" concept="2" trace="myWithCommandRule" />
+      <node id="8859277185626762079" at="26,0,29,0" concept="0" trace="TestEntityWithIdentification_Test#()V" />
+      <node id="8859277185626762079" at="41,0,44,0" concept="0" trace="TestBody#(Ljetbrains/mps/lang/test/runtime/TransformationTest;)V" />
+      <node id="8859277185626762349" at="30,0,34,0" concept="3" trace="test_ScopeOf_DomainObjectReference_domainObject_8859277185626762343#()V" />
+      <node id="8859277185626762360" at="34,0,38,0" concept="3" trace="test_ScopeOf_DomainObjectReference_domainObject_8859277185626762346#()V" />
+      <node id="8859277185626762349" at="46,0,50,0" concept="3" trace="test_ScopeOf_DomainObjectReference_domainObject_8859277185626762343#()V" />
+      <node id="8859277185626762360" at="50,0,54,0" concept="3" trace="test_ScopeOf_DomainObjectReference_domainObject_8859277185626762346#()V" />
+      <scope id="8859277185626762079" at="26,46,27,25" />
+      <scope id="8859277185626762349" at="31,102,32,127" />
+      <scope id="8859277185626762360" at="35,102,36,127" />
+      <scope id="8859277185626762079" at="41,52,42,19" />
+      <scope id="8859277185626762349" at="46,104,48,123">
+        <var name="operation" id="8859277185626762349" />
+      </scope>
+      <scope id="8859277185626762360" at="50,104,52,123">
+        <var name="operation" id="8859277185626762360" />
+      </scope>
+      <scope id="8859277185626762079" at="26,0,29,0" />
+      <scope id="8859277185626762079" at="41,0,44,0">
+        <var name="owner" id="8859277185626762079" />
+      </scope>
+      <scope id="8859277185626762349" at="30,0,34,0" />
+      <scope id="8859277185626762360" at="34,0,38,0" />
+      <scope id="8859277185626762349" at="46,0,50,0" />
+      <scope id="8859277185626762360" at="50,0,54,0" />
+      <unit id="8859277185626762079" at="39,0,56,0" name="FBMTests.Tests.TestEntityWithIdentification_Test$TestBody" />
+      <unit id="8859277185626762079" at="19,0,57,0" name="FBMTests.Tests.TestEntityWithIdentification_Test" />
+    </file>
+  </root>
+</debug-info>
+

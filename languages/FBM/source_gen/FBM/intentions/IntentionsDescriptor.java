@@ -33,9 +33,45 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
     switch (conceptIndex.index(cncpt)) {
       case 0:
         if (true) {
+          // Concept: DomainObject 
+          intentions = new IntentionFactory[1];
+          intentions[0] = new DeleteDomainObject_Intention();
+        }
+        break;
+      case 1:
+        if (true) {
+          // Concept: DomainObjectPopulation 
+          intentions = new IntentionFactory[1];
+          intentions[0] = new NewDomainObject_Intention();
+        }
+        break;
+      case 2:
+        if (true) {
+          // Concept: EntityType 
+          intentions = new IntentionFactory[2];
+          intentions[0] = new AddObjectification_Intention();
+          intentions[1] = new AddIdentification_Intention();
+        }
+        break;
+      case 3:
+        if (true) {
+          // Concept: Fact 
+          intentions = new IntentionFactory[1];
+          intentions[0] = new DeleteFact_Intention();
+        }
+        break;
+      case 4:
+        if (true) {
           // Concept: FactPopulation 
           intentions = new IntentionFactory[1];
           intentions[0] = new NewFact_Intention();
+        }
+        break;
+      case 5:
+        if (true) {
+          // Concept: FactType 
+          intentions = new IntentionFactory[1];
+          intentions[0] = new AddPredicate_Intention();
         }
         break;
       default:
@@ -47,9 +83,15 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
   @NotNull
   @Override
   public Collection<IntentionFactory> getAllIntentions() {
-    IntentionFactory[] rv = new IntentionFactory[1];
+    IntentionFactory[] rv = new IntentionFactory[7];
     rv[0] = new NewFact_Intention();
+    rv[1] = new NewDomainObject_Intention();
+    rv[2] = new DeleteDomainObject_Intention();
+    rv[3] = new DeleteFact_Intention();
+    rv[4] = new AddPredicate_Intention();
+    rv[5] = new AddObjectification_Intention();
+    rv[6] = new AddIdentification_Intention();
     return Arrays.asList(rv);
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568f70830L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568513d6bL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x7e0131bf361fd34cL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094bb228ddL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a5684b097bL), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x29b663a568f70830L), MetaIdFactory.conceptId(0xc25c730f75b14ba8L, 0xbf0613ccd89082c9L, 0x35ceb9094baf5b2dL)).seal();
 }

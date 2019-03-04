@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-fb13t2nqphdrwn6husydelrn2ccm6y">
-  <files names="IntentionsDescriptor.java:NewFact_Intention.java" />
+<product version="3" modelHash="9p88nyqoe6rxtqqny69hc8djv09231q">
+  <files names="AddIdentification_Intention.java:AddObjectification_Intention.java:AddPredicate_Intention.java:DeleteDomainObject_Intention.java:DeleteFact_Intention.java:IntentionsDescriptor.java:NewDomainObject_Intention.java:NewFact_Intention.java" />
 </product>
 

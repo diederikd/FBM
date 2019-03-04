@@ -182,7 +182,7 @@ import jetbrains.mps.editor.runtime.style.StyleAttributes;
     @NotNull
     @Override
     protected IReferentPresentationProvider getVisibleMatchingTextProvider() {
-      return PresentationProviders.PRESENTATION_hftasb_a0a0a;
+      return PresentationProviders.PRESENTATION_hftasb_a0a0a_0;
     }
   }
   private EditorCell createConstant_0() {

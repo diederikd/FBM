@@ -243,7 +243,7 @@
               <node concept="3clFbF" id="2AQoUlCZfZh" role="3cqZAp">
                 <node concept="2OqwBi" id="2AQoUlCZg85" role="3clFbG">
                   <node concept="Jnkvi" id="2AQoUlCZfZg" role="2Oq$k0">
-                    <ref role="1M0zk5" node="2AQoUlCXMua" resolve="factTable" />
+                    <ref role="1M0zk5" node="2AQoUlCXMua" resolve="factPopulation" />
                   </node>
                   <node concept="2qgKlT" id="2AQoUlCZgj_" role="2OqNvi">
                     <ref role="37wK5l" to="8gqh:2AQoUlCZ5fF" resolve="newFact" />
@@ -252,8 +252,38 @@
               </node>
             </node>
             <node concept="JncvC" id="2AQoUlCXMua" role="JncvA">
-              <property role="TrG5h" value="factTable" />
+              <property role="TrG5h" value="factPopulation" />
               <node concept="2jxLKc" id="2AQoUlCXMub" role="1tU5fm" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="37WguZ" id="7S1crWQ95GV">
+    <property role="TrG5h" value="NewDomainObject" />
+    <node concept="37WvkG" id="7S1crWQ95GW" role="37WGs$">
+      <ref role="37XkoT" to="jc24:2AQoUlCkjPF" resolve="DomainObject" />
+      <node concept="37Y9Zx" id="7S1crWQ95GX" role="37ZfLb">
+        <node concept="3clFbS" id="7S1crWQ95GY" role="2VODD2">
+          <node concept="Jncv_" id="7S1crWQ95GZ" role="3cqZAp">
+            <ref role="JncvD" to="jc24:7S1crWQ7Xdc" resolve="DomainObjectPopulation" />
+            <node concept="1r4N1M" id="7S1crWQ95H0" role="JncvB" />
+            <node concept="3clFbS" id="7S1crWQ95H1" role="Jncv$">
+              <node concept="3clFbF" id="7S1crWQ95H2" role="3cqZAp">
+                <node concept="2OqwBi" id="7S1crWQ95H3" role="3clFbG">
+                  <node concept="Jnkvi" id="7S1crWQ95H4" role="2Oq$k0">
+                    <ref role="1M0zk5" node="7S1crWQ95H6" resolve="domainObjectPopulation" />
+                  </node>
+                  <node concept="2qgKlT" id="7S1crWQ96bb" role="2OqNvi">
+                    <ref role="37wK5l" to="8gqh:7S1crWQ8SL8" resolve="newDomainObject" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="JncvC" id="7S1crWQ95H6" role="JncvA">
+              <property role="TrG5h" value="domainObjectPopulation" />
+              <node concept="2jxLKc" id="7S1crWQ95H7" role="1tU5fm" />
             </node>
           </node>
         </node>
